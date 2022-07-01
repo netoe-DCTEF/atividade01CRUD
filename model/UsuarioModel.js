@@ -7,6 +7,8 @@ const UsuarioSchema = conexao.Schema({
     cpf:{type:"String"},
     ie:{type:"String"},
     endereco:{type:"String"},
+    uf:{type:"String"},
+    cidade:{type:"String"},
     ddd:{type:"String"},
     telefone:{type:"String"},
     foto_perfil:{type:"String"},

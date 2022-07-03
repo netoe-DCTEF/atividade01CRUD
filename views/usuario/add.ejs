@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!---<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,9 @@
     <title>REGISTRA CLIENTES!</title>
 </head>
 <body>
+--->
+<%-include ('../include/default_look_page/header.ejs')%>
+
     <form method="post" class="form-cliente">
 
         <label for = "fotoInput">Foto:</label>        
@@ -61,10 +64,11 @@
         <input type="text" name="endereco" id = "enderecoInput" placeholder="Digite aqui o seu endereço:" required/>
 
         <label for = "dddInput">DDD:</label>        
-        <input type="text" name="ie" id = "dddInput" placeholder="(XX):" maxlength="2" required/>
+        <input type="text" name="ddd" id = "dddInput" placeholder="(XX):" maxlength="2" required/>
 
-        <label for = "ieInput">Telefone:</label>        
-        <input type="text" name="ie" id = "ieInput" placeholder="Digite aqui o seu telefone para contato:" maxlength="9"/>
+        <label for = "telefoneInput">Telefone:</label>        
+        <input type="text" name="telefone" id = "telefoneInput" placeholder="Digite aqui o seu telefone para contato:" maxlength="9"/>
+        <input type="submit" value="Adicionar"/>
+
     </form>
-</body>
-</html>
+<%- include ('../include/default_look_page/footer.ejs')%>

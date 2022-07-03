@@ -33,8 +33,15 @@ function add(req,res){
     });
 []
 }
-function list(req,res){}
-function list_filter(req,res){}
+function list(req,res){
+    UsuarioModel.find({}).then((usuario) =>{
+        res.render('../views/usuario/list.ejs');
+    });
+}
+function list_filter(req,res)
+{
+
+}
 function open_edit(req,res){}
 function edit(req,res){}
 function delete_user(req,res){}

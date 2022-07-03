@@ -11,7 +11,11 @@
     <title>REGISTRA CLIENTES!</title>
 </head>
 <body>
-    <form method="post" class="form-cliente"/>
+    <form method="post" class="form-cliente">
+
+        <label for = "fotoInput">Foto:</label>        
+        <input type="file" name="foto" id = "fotoInput" accept="image/png, image/jpeg" required/>
+
         <label for = "nomeInput">Nome:</label>        
         <input type="text" name="nome" required id = "nomeInput" placeholder="Ex:João da Silva Machado"/>
 
@@ -19,9 +23,10 @@
         <input type="text" name="cpf" required id = "cpfInput" placeholder="Informe aqui o seu cpf:" maxlength="11" required/>
         
         <label for = "ieInput">IE:</label>        
-        <input type="text" name="ie" id = "ieInput" placeholder="Digite aqui a inscrição estadual:" maxlength="9"/>
+        <input type="text" name="ie" id = "ieInput" placeholder="Digite aqui a inscrição estadual:" maxlength="9" required/>
 
-        <select name = "uf"id = "ufInput" required>
+        <label for = "ufInput">Estado:</label>
+        <select name = "uf" id = "ufInput" required>
             <option>UF</option>
             <option value = "Acre"> AC</option>
             <option value = "Alagoas">AL</option>
@@ -29,7 +34,6 @@
             <option value = "Amazonas">AM</option>
             <option value = "Bahia"> BA</option>
             <option value = "Ceará"> CE</option>
-
             <option value = "Distrito Federal">DF</option>
             <option value = "Espírito Santo">ES</option>
             <option value = "Goiás"> GO</option>
@@ -40,20 +44,27 @@
             <option value = "Pará"> PA</option>
             <option value = "Paraíba">PB</option>
             <option value = "Paraná">PR</option>
-            <option value = "Ceara"> CE</option>
-            <option value = "Ceara"> CE</option>
-            <option value = "Ceara"> CE</option>
-            <option value = "Ceara"> CE</option>
-            <option value = "Ceara"> CE</option>
+            <option value = "Pernambuco">PE</option>
+            <option value = "Piauí">PI</option>
+            <option value = "Rio de Janeiro">RJ</option>
+            <option value = "Rio Grande do Sul">RS</option>
+            <option value = "Santa Catarina">SC</option>
+            <option value = "São Paulo">SP</option>
+            <option value = "Sergipe">SE</option>
+            <option value = "Tocantins">TO</option>
         </select>
+        
+        <label for = "ieInput">Cidade:</label>        
+        <input type="text" name="cidade" id = "cidadeInput" placeholder="Digite aqui o seu endereço:" required/>
 
-        <label for = "ieInput">Endereço</label>        
-        <input type="text" name="endereco" id = "enderecoInput" placeholder="Digite aqui o seu endereço:"/>
+        <label for = "enderecoInput">Endereço:</label>        
+        <input type="text" name="endereco" id = "enderecoInput" placeholder="Digite aqui o seu endereço:" required/>
 
-        <label for = "ieInput">IE:</label>        
-        <input type="text" name="ie" id = "ieInput" placeholder="Digite aqui a inscrição estadual:" maxlength="9"/>
+        <label for = "dddInput">DDD:</label>        
+        <input type="text" name="ie" id = "dddInput" placeholder="(XX):" maxlength="2" required/>
 
-
+        <label for = "ieInput">Telefone:</label>        
+        <input type="text" name="ie" id = "ieInput" placeholder="Digite aqui o seu telefone para contato:" maxlength="9"/>
     </form>
 </body>
 </html>

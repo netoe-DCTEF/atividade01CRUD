@@ -44,9 +44,8 @@ table{
     text-align: center;
 }
 td{
-    text-align: center;
+    font-size: 10px;
 }
-
 .botaoLink{ 
     background-color: green;
     color: greenyellow;
@@ -55,4 +54,8 @@ td{
 }
 .botaoLink:visited{
     color:greenyellow;
+}
+
+.foto-perfil{
+    width: 150px;
 }

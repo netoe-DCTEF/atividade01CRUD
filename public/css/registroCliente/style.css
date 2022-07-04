@@ -28,24 +28,40 @@
     align-items: center;
     flex-direction: column;
     border: 1px solid black;
-        
     max-width: 200px;
     min-width: 70px;
     max-height: 200px;
     min-height:70px;
     width: 200px;
     height: 200px;
+    margin: 10px 0;
+    overflow: hidden;
+    border-radius: 20%;
 }
-.dados_cliente{}
+.foto-cliente img{
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 300px;
+}
+.dados_cliente{
+    border: 1px solid royalblue;
+    padding: 30px 0;
+}
 
+.bold{
+    font-weight: bold;
+}
+.normal{
+    font-weight:normal;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    display: block;
+}
 
-
-.h2_email{}
-.h2_cpf{}
-.h2_ie{}
-.h2_telefone{}   
-.h2_cidade_uf{}
-.h2_endereco{}
-.h2_carimbo{}
-
+th,tr,td{
+    border: 2px solid red;
+}
 

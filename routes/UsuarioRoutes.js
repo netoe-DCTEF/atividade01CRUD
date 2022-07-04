@@ -3,7 +3,6 @@ const multer = require('multer');
 const upload = require('../config/upload.js');
 const router = express.Router();
 const controller = require('../controller/UsuarioController.js');
-const { createIndexes } = require('../model/UsuarioModel.js');
 
 /*HTTPS:GET*/ 
 router.get('/add',controller.open_add);
@@ -16,9 +15,9 @@ router.get('/pedido/:id',controller.mostrarPedido)
 
 /*HTTPS:POST*/ 
 
-router.post('/add',upload.single('foto_perfil'),controller.add);
+router.post('/add',upload.single('foto'),controller.add);
 router.post('/list',controller.list_filter);
-router.post("/edit_user/:id",controller.edit_user);
+router.post("/edit_user/:id",upload.single('foto'),controller.edit_user);
 
 
 

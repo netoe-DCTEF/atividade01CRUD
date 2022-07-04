@@ -16,10 +16,10 @@
 
     <a href = "/usuario/list">Listar</a>
 
-    <form method="post" class="form-cliente">
+    <form method="post" class="form-cliente" enctype="multipart/form-data">
 
         <label for = "fotoInput">Foto:</label>        
-        <input type="file" name="foto" id = "fotoInput" accept="image/png, image/jpeg" required  value = "<%=usuario.foto%>"/>
+        <input type="file" name="foto" id = "fotoInput" accept="image/png, image/jpeg" value = "<%=usuario.foto%>"/>
 
         <label for = "nomeInput">Nome:</label>        
         <input type="text" name="nome" required id = "nomeInput" placeholder="Ex:João da Silva Machado" value = "<%=usuario.nome%>" />
@@ -35,7 +35,7 @@
 
         <label for = "ufInput">Estado:</label>
         <select name = "uf" id = "ufInput" required>
-            <option hidden>UF</option>
+            <option value = "">UF</option>
             <option value = "Acre"> AC</option>
             <option value = "Alagoas">AL</option>
             <option value = "Amapá">AP</option>

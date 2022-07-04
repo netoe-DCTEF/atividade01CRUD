@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/css/registroCliente/style.css"/>
     <title>Ver pedido: <%=usuario.nome%></title>
 </head>
@@ -17,40 +21,41 @@
                 <img src = "/img/photos/<%=usuario.foto_perfil%>" alt ="Foto de Perfil"/>
             </article>
             <article class = "dados_cliente">
-                <h2 id = "h2_nome">
-                    <strong>Nome:</strong>
-                    <%=usuario.nome%>
-                </h2>
+                <table>
+                    <tr>
+                        <th>Nome:</th>
+                        <td><%=usuario.nome %></td>
+                    </tr>
+                    <tr>
+                        <th>Foto:</th>
+                        <td><%=usuario.foto%> </td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                    </tr>
+                    <tr>
+                        <th>CPF:</th>
+                    </tr>
+                    <tr>
+                        <th>IE:</th>
+                    </tr>
+                    <tr>
+                        <th>Telefone:</th>
+                    </tr>
+                    <tr>
+                        <th>Estado:</th>
+                    </tr>
+                    <tr>
+                        <th>Cidade:</th>
+                    </tr>
+                    <tr>
+                        <th>Endereço:</th>
+                    </tr>
+                    <tr>
+                        <th>Carimbo:</th>
+                    </tr>
+                </table>
 
-                <h2 id = "h2_email">
-                    <strong>Email:</strong>
-                    <%=usuario.email%>
-                </h2>
-
-                <h2 id = "h2_cpf">
-                    <strong>CPF:</strong>
-                    <%=usuario.cpf%>
-                </h2>
-
-                <h2 id = "h2_ie">
-                    <strong>IE:</strong>
-                    <%=usuario.ie%>
-                </h2>
-                <h2 id = "h2_telefone">
-                    <strong>Telefone:</strong>
-                    <%=usuario.telefone%>
-                </h2>
-                <h2 id = "h2_cidade_uf">
-                    <strong>Cidade-UF:</strong>
-                    <%=usuario.cidade%>-<%=usuario.uf%>  
-                </h2>
-                <h2 id = "h2_endereco">
-                    <strong>Endereço:</strong>
-                    <%=usuario.endereco%>  
-                </h2>
-                <h2 id = "h2_carimbo">
-                    <h5><%=usuario.horaCarimbo%> <%= usuario.dataCarimbo%> </h5>
-                </h2>
 
 
             </article>

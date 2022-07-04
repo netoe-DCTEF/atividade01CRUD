@@ -32,7 +32,7 @@
                     <%=usuario.nome%>
                 </td>
                 <td>
-                    <img src = "/img/<%=usuario.foto_perfil%>" alt = "Foto" class = "foto-responsive"/>
+                    <img src = "/img/photos/<%=usuario.foto_perfil%>" alt = "Foto" class = "foto-perfil"/>
                 </td>
                 <td>
                     <%= usuario.email%>
@@ -71,8 +71,8 @@
                         <img src = "/img/icons/edit_icon.png" class = "img-fix-size"/>    
                     </a>   
                 </td>
-                <td>
-                    <a href = "/usuario/pedido/<%=usuario._id%>">Abrir</a>
+                <td class = "th_td_edit_delete">
+                    <a href = "/usuario/pedido/<%=usuario._id%>" >Abrir</a>
                 </td>
             </tr>
             

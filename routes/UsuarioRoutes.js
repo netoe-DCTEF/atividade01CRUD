@@ -8,6 +8,7 @@ router.get('/list',controller.list);
 router.get('/delete_user/id:',controller.delete_user);
 router.get('/edit',controller.open_edit);
 
+
 /*HTTPS:POST*/ 
 
 router.post('/add',controller.add);

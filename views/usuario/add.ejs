@@ -14,6 +14,8 @@
 --->
 <%-include ('../include/default_look_page/header.ejs')%>
 
+    <a href = "/usuario/list">Listar</a>
+
     <form method="post" class="form-cliente">
 
         <label for = "fotoInput">Foto:</label>        
@@ -30,7 +32,7 @@
 
         <label for = "ufInput">Estado:</label>
         <select name = "uf" id = "ufInput" required>
-            <option>UF</option>
+            <option hidden>UF</option>
             <option value = "Acre"> AC</option>
             <option value = "Alagoas">AL</option>
             <option value = "Amapá">AP</option>
@@ -57,8 +59,8 @@
             <option value = "Tocantins">TO</option>
         </select>
         
-        <label for = "ieInput">Cidade:</label>        
-        <input type="text" name="cidade" id = "cidadeInput" placeholder="Digite aqui o seu endereço:" required/>
+        <label for = "cidadeInput">Cidade:</label>        
+        <input type="text" name="cidade" id = "cidadeInput" placeholder="Digite a sua cidade:" required/>
 
         <label for = "enderecoInput">Endereço:</label>        
         <input type="text" name="endereco" id = "enderecoInput" placeholder="Digite aqui o seu endereço:" required/>

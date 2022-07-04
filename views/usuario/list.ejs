@@ -1,0 +1,64 @@
+<%-include ('../include/default_look_page/header.ejs')%>
+
+    <a href = "/usuario/add">Adicionar</a>
+
+    <form class = "search_form" method="post">
+        <input type="text" name="search" id="searchInput" placeholder="Digite o nome do cliente aqui!"/>
+        <input type="submit" value="Pesquisar"/>
+    </form>
+        <table class = "list_tabela">
+            <tr>
+                <th>ID:</th>
+                <th>Foto:</th>  
+                <th>Email:</th>
+                <th>CPF:</th>
+                <th>IE:</th>
+                <th>Telefone:</th>
+                <th>Cidade:</th>
+                <th>UF:</th>
+                <th>Endereço:</th>
+                <th>Carimbo</th>
+                <th>Visitas:</th>
+            </tr>
+            <% UsuarioModel.forEach((usuario)=>{%>
+            <tr>
+                <td>
+                    <%= usuario.id%>
+                </td>
+                <td>
+                    <%= usuario.foto%>
+                </td>
+                <td>
+                    <%= usuario.email%>
+                </td>
+                <td>
+                    <%= usuario.cpf%>
+                </td>
+                <td>
+                    <%= usuario.ie%>
+                </td>
+                <td>
+                   <span>(<%= usuario.ddd %>)  <%= usuario.telefone%></span>
+                </td>
+                <td>
+                    <%= usuario.cidade%>
+                </td>
+                <td>
+                    <%= usuario.uf%>
+                </td>
+                <td>
+                    <%= usuario.endereco%>
+                </td>
+                <td>
+                    <span><%= usuario.dataCarimbo %> <%= usuario.horaCarimbo %> </span>
+                </td>
+               
+                <td>
+                    <%= usuario.vezesVisitadas %> 
+                </td>
+            </tr>
+            
+            <% })%>
+        </table>
+
+<%- include ('../include/default_look_page/footer.ejs')%>

@@ -30,11 +30,13 @@ table{
     height: 50px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
-    width: 80%;
+    width: 100%;
 }
 
 .form-cliente{
     padding: 30px;
+    border: 1px solid black;
+    width: 80%;
 }
 
 .img-fix-size{
@@ -57,5 +59,6 @@ td{
 }
 
 .foto-perfil{
-    width: 150px;
+    width: 70px;
+    height:70px;
 }

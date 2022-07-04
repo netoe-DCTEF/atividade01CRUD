@@ -1,6 +1,6 @@
 <%-include ('../include/default_look_page/header.ejs')%>
 
-    <a href = "/usuario/add">Adicionar</a>
+    <a href = "/usuario/add" class ="botaoLink">Adicionar</a>
 
     <form class = "search_form" method="post">
         <input type="text" name="search" id="searchInput" placeholder="Digite o nome do cliente aqui!"/>
@@ -9,6 +9,7 @@
         <table class = "list_tabela">
             <tr>
                 <th>ID:</th>
+                <th>Nome:</th>
                 <th>Foto:</th>  
                 <th>Email:</th>
                 <th>CPF:</th>
@@ -18,7 +19,9 @@
                 <th>UF:</th>
                 <th>Endereço:</th>
                 <th>Carimbo</th>
-                <th>Visitas:</th>
+                <th>Deletar:</th>
+                <th>Editar:</th>
+                <th>Pedido:</th>
             </tr>
             <% UsuarioModel.forEach((usuario)=>{%>
             <tr>
@@ -26,7 +29,10 @@
                     <%= usuario.id%>
                 </td>
                 <td>
-                    <%= usuario.foto%>
+                    <%=usuario.nome%>
+                </td>
+                <td>
+                    <img src = "/img/<%=usuario.foto_perfil%>" alt = "Foto" class = "foto-responsive"/>
                 </td>
                 <td>
                     <%= usuario.email%>
@@ -52,9 +58,21 @@
                 <td>
                     <span><%= usuario.dataCarimbo %> <%= usuario.horaCarimbo %> </span>
                 </td>
-               
+
+                <td class ="th_td_edit_delete">
+                    <a href = "/usuario/delete_user/<%= usuario._id%>">
+                        <img src = "/img/icons/delete_icon.png" class = "img-fix-size" />    
+                    </a>
+                    
+                </td>
+                <td class = "th_td_edit_delete">
+
+                    <a href = "/usuario/edit_user/<%= usuario._id%>">
+                        <img src = "/img/icons/edit_icon.png" class = "img-fix-size"/>    
+                    </a>   
+                </td>
                 <td>
-                    <%= usuario.vezesVisitadas %> 
+                    <a href = "/usuario/pedido/<%=usuario._id%>">Abrir</a>
                 </td>
             </tr>
             

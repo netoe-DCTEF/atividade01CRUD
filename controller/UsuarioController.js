@@ -19,7 +19,7 @@ function add(req,res){
     usuario.cidade = req.body.cidade;
     usuario.ddd = req.body.ddd;
     usuario.telefone = req.body.telefone;
-    usuario.foto_perfil = req.body.foto_perfil;
+    usuario.foto_perfil = req.body.foto;
     usuario.dataCarimbo = dataCompleta;
     usuario.horaCarimbo = horaCompleta;
 
@@ -42,9 +42,51 @@ function list_filter(req,res)
 {
 
 }
-function open_edit(req,res){}
-function edit(req,res){}
-function delete_user(req,res){}
+function open_edit(req,res)
+{
+    UsuarioModel.findById(req.params.id).then((usuario)=>{
+        res.render('usuario/edit.ejs',{usuario:usuario});
+    });
+    
+}
+function edit_user(req,res)
+{
+    UsuarioModel.findByIdAndUpdate(req.params.id,
+        {
+            nome:req.body.nome,
+            email:req.body.email,
+            cpf:req.body.cpf,
+            ie:req.body.ie,
+            endereco:req.body.endereco,
+            uf:req.body.uf,
+            cidade:req.body.cidade,
+            ddd:req.body.ddd,
+            telefone:req.body.telefone,
+            foto_perfil:req.body.foto,
+            dataCarimbo:req.body.dataCarimbo,
+            horaCarimbo:req.body.horaCarimbo,
+    
+        },
 
+        function (err,result){
+            if(err){
+                res.send('\nError: ' + err);
+            }
+            else{
+                res.redirect('/usuario/list');
+            }
+        }
+    );
+}
+function delete_user(req,res){
+    UsuarioModel.findByIdAndDelete(req.params.id).then(()=>{
+        res.redirect('/usuario/list');
+    });
+}
+function mostrarPedido(req,res){
+    UsuarioModel.findById(req.params.id).then((usuario)=>{
+        res.render('usuario/clienteImprimir/clienteImprimir.ejs',{usuario:usuario});
+    });
+}
 
-module.exports = {open_add,add,list,list_filter,open_edit,edit,delete_user};
+module.exports = {open_add,add,list,list_filter,open_edit,edit_user,delete_user,mostrarPedido};

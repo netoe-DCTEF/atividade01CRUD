@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+#wrapper{
+    border: 2px solid green;
+    padding: 20px;
+}
+.header-name
+{   
+    display:flex;
+    border: 2px solid red;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    min-height: 50px;
+    height:80px;
+    max-height: 80px;
+    width: 100%;
+}
+
+.foto-cliente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+        
+    max-width: 200px;
+    min-width: 70px;
+    max-height: 200px;
+    min-height:70px;
+    width: 200px;
+    height: 200px;
+}
+.dados_cliente{}
+
+
+
+.h2_email{}
+.h2_cpf{}
+.h2_ie{}
+.h2_telefone{}   
+.h2_cidade_uf{}
+.h2_endereco{}
+.h2_carimbo{}
+
+

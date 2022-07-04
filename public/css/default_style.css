@@ -2,6 +2,8 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+
+    font-family: sans-serif;
 }
 input{
     outline: none;
@@ -11,9 +13,9 @@ body{
     margin: 0 auto;
 }
 
-.list_tabela td,.list_tabela th,.list_tabela {
+.list_tabela td,.list_tabela th {
     border: 1px solid black;
-    padding: 10px;
+    padding: 7px;
     margin: 0 auto;
 }
 table{
@@ -22,7 +24,7 @@ table{
 
 .form-cliente *{
     display: block;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .form-cliente input{
     height: 50px;
@@ -33,4 +35,24 @@ table{
 
 .form-cliente{
     padding: 30px;
+}
+
+.img-fix-size{
+    width: 30px;
+}
+.th_td_edit_delete{
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+
+.botaoLink{ 
+    background-color: green;
+    color: greenyellow;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+.botaoLink:visited{
+    color:greenyellow;
 }

@@ -1,19 +1,24 @@
 const express = require('express');
+const multer = require('multer');
+const upload = require('../config/upload.js');
 const router = express.Router();
-const controller = require('../controller/UsuarioController');
+const controller = require('../controller/UsuarioController.js');
+const { createIndexes } = require('../model/UsuarioModel.js');
 
 /*HTTPS:GET*/ 
 router.get('/add',controller.open_add);
 router.get('/list',controller.list);
-router.get('/delete_user/id:',controller.delete_user);
-router.get('/edit',controller.open_edit);
+router.get('/delete_user/:id',controller.delete_user);
+router.get('/edit_user/:id',controller.open_edit);
+router.get('/pedido/:id',controller.mostrarPedido)
+
 
 
 /*HTTPS:POST*/ 
 
-router.post('/add',controller.add);
+router.post('/add',upload.single('foto_perfil'),controller.add);
 router.post('/list',controller.list_filter);
-router.post("/edit/id:",controller.edit);
+router.post("/edit_user/:id",controller.edit_user);
 
 
 

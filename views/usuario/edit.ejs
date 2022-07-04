@@ -19,19 +19,19 @@
     <form method="post" class="form-cliente">
 
         <label for = "fotoInput">Foto:</label>        
-        <input type="file" name="foto" id = "fotoInput" accept="image/png, image/jpeg" required/>
+        <input type="file" name="foto" id = "fotoInput" accept="image/png, image/jpeg" required  value = "<%=usuario.foto%>"/>
 
         <label for = "nomeInput">Nome:</label>        
-        <input type="text" name="nome" required id = "nomeInput" placeholder="Ex:João da Silva Machado"/>
+        <input type="text" name="nome" required id = "nomeInput" placeholder="Ex:João da Silva Machado" value = "<%=usuario.nome%>" />
 
         <label for = "emailInput">Email:</label>        
-        <input type="email" name="email" id = "email" placeholder="exemplo@exemplo.com"/>
+        <input type="email" name="email" id = "email" placeholder="exemplo@exemplo.com" value = "<%=usuario.email%>"/>
 
         <label for = "cpfInput">CPF:</label>        
-        <input type="text" name="cpf" required id = "cpfInput" placeholder="Informe aqui o seu cpf:" maxlength="11" required/>
+        <input type="text" name="cpf" required id = "cpfInput" placeholder="Informe aqui o seu cpf:" maxlength="11" required value = "<%=usuario.cpf%>"/>
         
         <label for = "ieInput">IE:</label>        
-        <input type="text" name="ie" id = "ieInput" placeholder="Digite aqui a inscrição estadual:" maxlength="9" required/>
+        <input type="text" name="ie" id = "ieInput" placeholder="Digite aqui a inscrição estadual:" maxlength="9" required value = "<%=usuario.ie%>"/>
 
         <label for = "ufInput">Estado:</label>
         <select name = "uf" id = "ufInput" required>
@@ -63,17 +63,17 @@
         </select>
         
         <label for = "cidadeInput">Cidade:</label>        
-        <input type="text" name="cidade" id = "cidadeInput" placeholder="Digite a sua cidade:" required/>
+        <input type="text" name="cidade" id = "cidadeInput" placeholder="Digite a sua cidade:" required value = "<%=usuario.cidade%>"/>
 
         <label for = "enderecoInput">Endereço:</label>        
-        <input type="text" name="endereco" id = "enderecoInput" placeholder="Digite aqui o seu endereço:" required/>
+        <input type="text" name="endereco" id = "enderecoInput" placeholder="Digite aqui o seu endereço:" required value = "<%=usuario.endereco%>"/>
 
         <label for = "dddInput">DDD:</label>        
-        <input type="text" name="ddd" id = "dddInput" placeholder="(XX):" maxlength="2" required/>
+        <input type="text" name="ddd" id = "dddInput" placeholder="(XX):" maxlength="2" required value = "<%=usuario.ddd%>"/>
 
         <label for = "telefoneInput">Telefone:</label>        
-        <input type="text" name="telefone" id = "telefoneInput" placeholder="Digite aqui o seu telefone para contato:" maxlength="9"/>
-        <input type="submit" value="Adicionar"/>
+        <input type="text" name="telefone" id = "telefoneInput" placeholder="Digite aqui o seu telefone para contato:" maxlength="9" value = "<%=usuario.telefone%>" />
+        <input type="submit" value="Finalizar Edição"/>
 
     </form>
 <%- include ('../include/default_look_page/footer.ejs')%>

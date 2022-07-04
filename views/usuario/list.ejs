@@ -1,82 +1,96 @@
 <%-include ('../include/default_look_page/header.ejs')%>
+<div id ="wrapper">
 
-    <a href = "/usuario/add" class ="botaoLink">Adicionar</a>
+    <header class ="header-content-box">
+        <nav>
+            <li>
+                <a href = "/usuario/add" class ="botaoLink">Adicionar</a>   
+            <li>
+            <li>
+                Lista de usuários:
+            <li>
+        </nav>
+    </header>
+    <main>
+        <form class = "search-form" method="post">
+            <input type="text" name="search" id="searchInput" placeholder="Digite o nome do cliente aqui!"/>
+            <input type="submit" value="Pesquisar"/>
+        </form>
 
-    <form class = "search_form" method="post">
-        <input type="text" name="search" id="searchInput" placeholder="Digite o nome do cliente aqui!"/>
-        <input type="submit" value="Pesquisar"/>
-    </form>
-        <table class = "list_tabela">
-            <tr>
-                <th>ID:</th>
-                <th>Nome:</th>
-                <th>Foto:</th>  
-                <th>Email:</th>
-                <th>CPF:</th>
-                <th>IE:</th>
-                <th>Telefone:</th>
-                <th>Cidade:</th>
-                <th>UF:</th>
-                <th>Endereço:</th>
-                <th>Carimbo</th>
-                <th>Deletar:</th>
-                <th>Editar:</th>
-                <th>Pedido:</th>
-            </tr>
-            <% UsuarioModel.forEach((usuario)=>{%>
-            <tr>
-                <td>
-                    <%= usuario.id%>
-                </td>
-                <td>
-                    <%=usuario.nome%>
-                </td>
-                <td>
-                    <img src = "/img/photos/<%=usuario.foto_perfil%>" alt = "Foto" class = "foto-perfil"/>
-                </td>
-                <td>
-                    <%= usuario.email%>
-                </td>
-                <td>
-                    <%= usuario.cpf%>
-                </td>
-                <td>
-                    <%= usuario.ie%>
-                </td>
-                <td>
-                   <span>(<%= usuario.ddd %>)  <%= usuario.telefone%></span>
-                </td>
-                <td>
-                    <%= usuario.cidade%>
-                </td>
-                <td>
-                    <%= usuario.uf%>
-                </td>
-                <td>
-                    <%= usuario.endereco%>
-                </td>
-                <td>
-                    <span><%= usuario.dataCarimbo %> <%= usuario.horaCarimbo %> </span>
-                </td>
+        <section class ="table-section">
+            <table class = "list-tabela">
+                <tr>
+                    <th>Nome:</th>
+                    <th>Foto:</th>  
+                    <th>Email:</th>
+                    <th>CPF:</th>
+                    <th>IE:</th>
+                    <th>Telefone:</th>
+                    <th>Cidade:</th>
+                    <th>UF:</th>
+                    <th>Endereço:</th>
+                    <th>Carimbo</th>
+                    <th>Deletar:</th>
+                    <th>Editar:</th>
+                    <th>Pedido:</th>
+                </tr>
+                <% UsuarioModel.forEach((usuario)=>{%>
+                <tr>
+                    <td class = "align-center-table">
+                        <%=usuario.nome%>
+                    </td>
+                    <td class = "align-center-table">
+                        <img src = "/img/photos/<%=usuario.foto_perfil%>" alt = "Foto" class = "foto-perfil" />
+                    </td>
+                    <td class = "align-center-table">
+                        <%= usuario.email%>
+                    </td class = "align-center-table">
+                    <td class = "align-center-table">
+                        <%= usuario.cpf%>
+                    </td>
+                    <td class = "align-center-table">
+                        <%= usuario.ie%>
+                    </td>
+                    <td class = "align-center-table">
+                        <span>(<%= usuario.ddd %>)  <%= usuario.telefone%></span>
+                    </td>
+                    <td class = "align-center-table">
+                        <%= usuario.cidade%>
+                    </td>
+                    <td class = "align-center-table">
+                        <%= usuario.uf%>
+                    </td>
+                    <td class = "align-center-table">
+                        <%= usuario.endereco%>
+                    </td>
+                    <td class = "align-center-table">
+                        <span><%= usuario.dataCarimbo %> <%= usuario.horaCarimbo %> </span>
+                    </td>
 
-                <td class ="th_td_edit_delete">
-                    <a href = "/usuario/delete_user/<%= usuario._id%>">
-                        <img src = "/img/icons/delete_icon.png" class = "img-fix-size" />    
-                    </a>
-                    
-                </td>
-                <td class = "th_td_edit_delete">
+                    <td class ="align-center-table">
+                        <a href = "/usuario/delete_user/<%= usuario._id%>">
+                            <img src = "/img/icons/delete_icon.png" class = "img-fix-size" />    
+                        </a>
+                        
+                    </td>
+                    <td class = "align-center-table">
 
-                    <a href = "/usuario/edit_user/<%= usuario._id%>">
-                        <img src = "/img/icons/edit_icon.png" class = "img-fix-size"/>    
-                    </a>   
-                </td>
-                <td class = "th_td_edit_delete">
-                    <a href = "/usuario/pedido/<%=usuario._id%>" >Abrir</a>
-                </td>
-            </tr>
-            
-            <% })%>
-        </table>
+                        <a href = "/usuario/edit_user/<%= usuario._id%>">
+                            <img src = "/img/icons/edit_icon.png" class = "img-fix-size"/>    
+                        </a>   
+                    </td>
+                    <td class = "align-center-table">
+                        <a href = "/usuario/pedido/<%=usuario._id%>" >Abrir</a>
+                    </td>
+                </tr>
+                
+                <% })%>
+            </table>
+    </section>
+    </main>
+    <footer>
+    
 
+    </footer>
+</div>
 <%- include ('../include/default_look_page/footer.ejs')%>

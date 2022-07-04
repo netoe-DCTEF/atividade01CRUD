@@ -18,6 +18,7 @@ router.get('/pedido/:id',controller.mostrarPedido)
 router.post('/add',upload.single('foto'),controller.add);
 router.post('/list',controller.list_filter);
 router.post("/edit_user/:id",upload.single('foto'),controller.edit_user);
+router.post('/list',controller.list_filter);
 
 
 

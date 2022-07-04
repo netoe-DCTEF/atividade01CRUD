@@ -40,7 +40,11 @@ function list(req,res){
 }
 function list_filter(req,res)
 {
+    let search_data = req.body.search;
 
+    UsuarioModel.find({nome: new RegExp(search_data,"i")}).then((usuario) =>{
+        res.render('../views/usuario/list.ejs',{UsuarioModel:usuario});
+    });
 }
 function open_edit(req,res)
 {

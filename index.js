@@ -10,6 +10,11 @@ app.use(express.static(path.join(__dirname,'/public')));
 app.use(express.urlencoded({ extends: true }));
 app.use('/usuario',usuario_router);
 
+app.get('/',(req,res)=>{
+    res.render(__dirname + '/index.ejs');
+});
+
+
 
 app.listen(3000,()=>{
     console.log("\nRODANDO APP NA PORTA: " + porta);

@@ -1,8 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
     font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    background-color: rgb(26, 10, 71);
+}
+table *
+{   
+    color:white;
+}
+.header-content-box{
+    background-color: rgb(26, 10, 71);
+    min-height: 70px;
+    max-height: 120px;
+    height:100%;
+    max-width: 100%;
+    min-width: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+.header-content-box li{
+    margin:0 20px;
 }
 
 .img-fix-size{
@@ -21,13 +47,23 @@ td{
 
 td,th{
     padding:10px;
-    border:2px solid black;
+    border:2px solid white;
 }
 li{
     display: inline;
 }
+li span{
+    color:white ;
+}
 li a{
+    background-color: rgb(82, 26, 146);
+    padding:10px 20px;
     text-decoration: none;
+    color:white;
+    border-bottom:2px solid white;
+}
+a:hover{
+    background-color: rgb(77, 24, 138);
 }
 
 .search-form{
@@ -43,9 +79,17 @@ li a{
     outline:none;
     width:49%;
     height:30px;
-    padding: 7px;
+    padding: 10px;
+    font-size: 12px;
 }
 .search-form input[type="submit"]{
+
+    background-color: rgb(82, 26, 146);
+    box-shadow: 0 0 0 0;
+    border:0 none;
+    text-decoration: none;
+    color:white;
+    border-bottom:2px solid white;
     width:20%;
     height:30px;
 }

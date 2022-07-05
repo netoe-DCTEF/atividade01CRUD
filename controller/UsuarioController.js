@@ -91,5 +91,4 @@ function mostrarPedido(req,res){
         res.render('usuario/clienteImprimir/clienteImprimir.ejs',{usuario:usuario});
     });
 }
-
 module.exports = {open_add,add,list,list_filter,open_edit,edit_user,delete_user,mostrarPedido};

@@ -1,5 +1,4 @@
 const express = require('express');
-const { dirname } = require('path');
 const path = require('path');
 const usuario_router = require('./routes/UsuarioRoutes.js');
 const app = express();

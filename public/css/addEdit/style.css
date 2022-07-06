@@ -5,6 +5,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    border:2px solid red;
 }
 
 .header-content-box ul{
@@ -52,10 +53,9 @@
 
 .header-content-box li{
     list-style: none;
-    display: inline;
+    margin:0 15px;
 }
 .acaoUsuario{
-    margin-left:30px;
     color: white;
 }
 
@@ -136,6 +136,17 @@ input::placeholder{
 @media screen and (max-width: 310px){
     .header-content-box ul{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-content-box li h2{
+        font-size: 12px;
+    }
+    .header-content-box
+    {
+        justify-content: center;
+        align-items:center;
+
     }
 }
 

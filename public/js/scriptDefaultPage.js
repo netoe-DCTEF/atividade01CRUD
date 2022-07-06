@@ -11,10 +11,10 @@ function getSaudacao(){
         saudacao.innerHTML = "Bom dia , Sudo!";
     }
     else if(hora >=12 && hora < 18){
-        saudacao.innerHTML = "Boa Tarde , Sudo!";
+        saudacao.innerHTML = "Boa tarde , Sudo!";
     }
     else{
-        saudacao.innerHTML = "Boa Noite , Sudo!";
+        saudacao.innerHTML = "Boa noite , Sudo!";
     }
 
 }

@@ -1,12 +1,12 @@
 function getDate(){
-    var date = new Date();
-    var data_to_inner = document.querySelector('#newCorp');
+    let date = new Date();
+    let data_to_inner = document.querySelector('#newCorp');
     data_to_inner.innerHTML = "NEWCORP LTDA &copy" + date.getFullYear();
 }
 function getSaudacao(){
-    var saudacao = document.querySelector('#saudacoes');
-    var date = new Date();
-    var hora = date.getHours();
+    let saudacao = document.querySelector('#saudacoes');
+    let date = new Date();
+    let hora = date.getHours();
     if(hora >=6 && hora < 12){
         saudacao.innerHTML = "Bom dia , Sudo!";
     }

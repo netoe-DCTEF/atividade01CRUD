@@ -73,6 +73,13 @@ main{
     padding:0 10px;
     outline:none;
 }
+.article-div-margins select:hover{
+    cursor:pointer;
+}
+.article-div-margins [type="submit"]:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+}
 
 .article-div-margins #dddInput,
 .article-div-margins #ufInput{

@@ -97,6 +97,11 @@ a:hover{
     height:30px;
 }
 
+.search-form input[type="submit"]:hover{
+    background-color: rgb(82, 50, 200);
+    cursor: pointer;
+}
+
 #wrapper{
     margin: auto;
 }

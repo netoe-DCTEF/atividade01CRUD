@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width:100%;
 }
 .header-content-box ul h2{
     font-size:20px;
@@ -133,7 +134,7 @@ input::placeholder{
     }
 }
 
-@media screen and (max-width: 310px){
+@media screen and (max-width: 350px){
     .header-content-box ul{
         flex-direction: column;
         justify-content: center;
@@ -147,6 +148,12 @@ input::placeholder{
         justify-content: center;
         align-items:center;
 
+    }
+    .form-add label{
+        font-size: 12px;
+    }
+    .form-add input::placeholder{
+        font-size: 9px;
     }
 }
 

@@ -7,7 +7,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+.header-content-box ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-content-box ul h2{
+    font-size:20px;
+}
 .header-content-box a{
     text-decoration: none;
     color:white;
@@ -61,7 +68,7 @@ main{
 .form-add{
     border-top:3px solid rgba(255, 255, 255, 0.63);
     margin:50px auto;
-    width:40%;
+    width:60%;
     padding:1.2em;
 }
 
@@ -119,4 +126,17 @@ input::placeholder{
     display:block;
     margin:10px 0;
 }
+
+@media screen and (max-width: 610px){
+    .form-add{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 310px){
+    .header-content-box ul{
+        flex-direction: column;
+    }
+}
+
 

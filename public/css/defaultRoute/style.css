@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 #wrapper{
-    width:80%;
+    width:96%;
     margin:0 auto;
     border-left: 2px solid grey;
     border-right: 2px solid grey;
@@ -53,7 +53,6 @@ main{
 {
     padding:15px;
     border-bottom:2px solid rgb(217, 188, 255);
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.096);
     width:60%;
     max-height: 800px;
     min-height:500px;
@@ -97,8 +96,12 @@ main{
     text-decoration: none;
     display: inline-block;
     background-color: rgb(82, 26, 146);
-    height: 50px;
-    width:120px;
+    min-height: 50px;
+    max-height: 50px;
+    height: 100%;
+    min-width: 100px;
+    max-width: 120px;
+    width:100%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +109,24 @@ main{
     color:white;
     font-size: 15px;
 }
+
+
+@media (max-width: 300px) {
+    .nav-content-box ul{
+        flex-direction: column;
+    }
+    .link-routes{
+        min-height: 25px;
+        min-width: 50px;
+        font-size: 8px;
+        margin-top: 20px;
+    }
+    .nav-content-box h2{
+        color: white;
+        font-weight: normal;
+        font-size: 15px;
+    }
+}   
 .link-routes:hover{
     background-color: rgb(77, 24, 138);
 }

@@ -1,5 +1,4 @@
 const UsuarioModel = require('../model/UsuarioModel.js');
-
 function open_add(req,res){
     res.render("usuario/add.ejs");  
 }

@@ -7,14 +7,14 @@ function getSaudacao(){
     var saudacao = document.querySelector('#saudacoes');
     var date = new Date();
     var hora = date.getHours();
-    if(hora < 12){
-        saudacao.innerHTML = "Bom dia , Admin!";
+    if(hora >=6 && hora < 12){
+        saudacao.innerHTML = "Bom dia , Sudo!";
     }
     else if(hora >=12 && hora < 18){
-        saudacao.innerHTML = "Boa Tarde , Admin!";
+        saudacao.innerHTML = "Boa Tarde , Sudo!";
     }
     else{
-        saudacao.innerHTML = "Boa Noite , Admin!";
+        saudacao.innerHTML = "Boa Noite , Sudo!";
     }
 
 }

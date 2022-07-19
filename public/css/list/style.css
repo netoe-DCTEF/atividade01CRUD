@@ -8,14 +8,14 @@
     font-family: 'Poppins', sans-serif;
 }
 main{
-    background-image: radial-gradient(rgb(99, 94, 94),rgb(213, 149, 29));
+    background-image: linear-gradient(red,gray);
     background: opacity 50%;
     height:100%;
     min-height: 1000px;
 }
 table *
 {   
-    color:rgb(22, 18, 18);
+    color:white;
 }
 table{
     margin-top:20px;

@@ -10,8 +10,8 @@
     margin:0 auto;
     border-left: 2px solid grey;
     border-right: 2px solid grey;
-    max-height: 1500px;
-    min-height:800px;
+    max-height: 1000px;
+    min-height:600px;
     height:100%;
 }
 body{

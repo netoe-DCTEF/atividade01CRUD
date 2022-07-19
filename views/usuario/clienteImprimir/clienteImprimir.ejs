@@ -36,55 +36,54 @@
                         lass="fs-6">Adicionar</span></a>
             </div>
         </div>
-        <div class="row bg-light">
+        <div class="row bg-light p-5">
             <div class="data-fields">
-                <div class="img-field">
-                    <img src="/img/photos/<%=usuario.foto_perfil%>" alt="Imagem do usuário" class="img-responsive">
-                    <div>
+                <div class="img-field m-2">
+                        <img src="/img/photos/<%=usuario.foto_perfil%>" alt="Imagem do usuário" class="img-responsive">
+                <div>
                     </div>
                     <div class="data-fields">
-                        <div class="text-primary d-inline-block">Nome:</div>
+                        <div class="text-primary d-inline-block titles-data-field">Nome:</div>
                         <div class="text-secondary d-inline-block">
                             <%=usuario.nome%>
                         </div>
                     </div>
 
                     <div class="data-fields">
-                        <div class="text-primary d-inline-block">CPF:</div>
+                        <div class="text-primary d-inline-block titles-data-field">CPF:</div>
                         <div class="text-secondary d-inline-block">
                             <%=usuario.cpf%>
                         </div>
                     </div>
 
                     <div class="data-fields">
-                        <div class="text-primary d-inline-block">IE:</div>
+                        <div class="text-primary d-inline-block titles-data-field">IE:</div>
                         <div class="text-secondary d-inline-block">
                             <%=usuario.ie%>
                         </div>
                     </div>
 
                     <div class="data-fields">
-                        <div class="text-primary d-inline-block">Telefone:</div>
+                        <div class="text-primary d-inline-block titles-data-field">Telefone:</div>
                         <div class="text-secondary d-inline-block">(<%=usuario.ddd%>) <%=usuario.telefone%>
                         </div>
                     </div>
                     <div class="data-fields">
-                        <div class="text-primary d-inline-block">Email:</div>
+                        <div class="text-primary d-inline-block titles-data-field">Email:</div>
                         <div class="text-secondary d-inline-block">
                             <%=usuario.email%>
                         </div>
                     </div>
                     <div class="data-fields">
-                        <div class="text-primary d-inline-block">Estado(UF):</div>
+                        <div class="text-primary d-inline-block titles-data-field">Cidade e UF:</div>
                         <div class="text-secondary d-inline-block">
-                            <%=usuario.uf%>
+                            <%=usuario.cidade%> - <%=usuario.uf%>
                         </div>
                     </div>
-
                     <div class="data-fields">
-                        <div class="text-primary d-inline-block">Cidade:</div>
+                        <div class="text-primary d-inline-block titles-data-field">Carimbo:</div>
                         <div class="text-secondary d-inline-block">
-                            <%=usuario.cidade%>
+                            <%=usuario.carimbo.toLocaleString()%>
                         </div>
                     </div>
 

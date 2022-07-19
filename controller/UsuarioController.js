@@ -19,8 +19,6 @@ function add(req,res){
     usuario.ddd = req.body.ddd;
     usuario.telefone = req.body.telefone;
     usuario.foto_perfil = req.file.filename;
-    usuario.dataCarimbo = dataCompleta;
-    usuario.horaCarimbo = horaCompleta;
 
     usuario.save((err,result)=>{
         if(err){
@@ -66,8 +64,6 @@ function edit_user(req,res)
             ddd:req.body.ddd,
             telefone:req.body.telefone,
             foto_perfil:req.file.filename,
-            dataCarimbo:req.body.dataCarimbo,
-            horaCarimbo:req.body.horaCarimbo
         },
 
         function (err,result){

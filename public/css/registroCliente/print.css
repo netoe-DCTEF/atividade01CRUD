@@ -1,3 +1,6 @@
+body{
+    font-family: serif;
+}
 .img-responsive{
     border: 2px solid grey;
     width: 200px;
@@ -7,12 +10,4 @@
 }
 .titles-data-field{
     margin:0.5em 0;
-}
-
-.display-none{
-    display:none;
-}
-
-.display-none *{
-    display:none;
 }

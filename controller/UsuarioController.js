@@ -86,4 +86,10 @@ function mostrarPedido(req,res){
         res.render('usuario/clienteImprimir/clienteImprimir.ejs',{usuario:usuario});
     });
 }
-module.exports = {open_add,add,list,list_filter,open_edit,edit_user,delete_user,mostrarPedido};
+
+function imprimirPedido(req,res){
+    UsuarioModel.findById(req.params.id).then((usuario)=>{
+        res.render('usuario/clienteImprimir/print.ejs',{usuario:usuario});
+    });
+}
+module.exports = {open_add,add,list,list_filter,open_edit,edit_user,delete_user,mostrarPedido,imprimirPedido};

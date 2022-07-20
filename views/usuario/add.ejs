@@ -19,7 +19,7 @@
                 <a href = "/usuario/list" class = "btn btn-success text-decoration-none"> Listar</a>
             </div>
         </div>
-        <div class = "row">
+        <div class = "row p-0">
             <div class = "card">
                 <div class = "card-header">
                     <p>
@@ -28,49 +28,77 @@
                 </div>
                 <div class = "card-body">
                     <div class = "row">
-                        <div class = "row">
-                            <label for = "input-nome">Nome:</label>
-                        </div>
-                        <div class = "row">
-                            <input type="text" name="nome" id="input-nome" placeholder="Digite o seu nome aqui:" required >
-                        </div>
-                        <div class = "row">
-                            <label for = "input-cpf">CPF:</label>
-                        </div>
-                        <div class = "row">
-                            <input type="number" name="cpf" id="input-cpf" placeholder="Informe o seu CPF aqui:" maxlength="11" required >
-                        </div>
-                        <div class = "row">
-                            <label for = "input-ie">Inscrição Estadual:</label>
-                        </div>
-                        <div class = "row">
-                            <input type="number" name="ie" id="input-ie" placeholder="Digite a IE aqui:" maxlength="9" required >
-                        </div>
-                        <div class = "row">
-                            <label for = "input-ddd">DDD:</label>
-                        </div>
-                        <div class = "row">
-                            <select name = "ddd">
-                                <% for(let i = 11; i <= 99;i++){
-                                    if
-                                    (
-                                        i == 20 ||i == 23 || i == 25 || i == 26 || i == 28 || i == 29 ||
-                                        i == 30 || i == 36 || i== 39 || i == 40 || i == 50 || i == 51 ||
-                                        i == 52 || (i >=55 && i <61) || i == 70 || i == 72 || i == 76 ||
-                                        i == 78 || i == 80 || i == 90
-                                    )
-                                    {
-                                        continue;
-                                    }
-                                    else
-                                    {
-                                %>
-                                    <option value = "<%=i%>"><%=i%></option>
-                                <%}
-                                }%>
-                            </select>
-                        </div>
-                        
+                        <form class= "" method="post">
+                            <fieldset>
+                                <legend>Dados Pessoais</legend>
+                                <hr>
+                                    <div class = "row">
+                                        <label for = "input-nome" class = "form-label">Nome:</label>
+                                    </div>
+                                    <div class = "row">
+                                        <input type="text" name="nome" id="input-nome" placeholder="Digite o seu nome aqui:" class = "form-control"required >
+                                    </div>
+                                    <div class = "row">
+                                        <label for = "input-cpf" class = "form-label">CPF:</label>
+                                    </div>
+                                    <div class = "row">
+                                        <input type="number" name="cpf" id="input-cpf" placeholder="Informe o seu CPF aqui:" class = "form-control" maxlength="11" required >
+                                    </div>
+                                    <div class = "row">
+                                        <label for = "input-ie" class = "form-label">Inscrição Estadual:</label>
+                                    </div>
+                                    <div class = "row">
+                                        <input type="number" name="ie" id="input-ie" placeholder="Digite a IE aqui:" class = "form-control" maxlength="9" required >
+                                    </div>
+
+                            </fieldset>
+                            <div class = "row">
+                                <label for = "input-ddd">DDD:</label>
+                            </div>
+                            <div class = "row">
+                                <select name = "ddd" class = "form-control">
+                                    <% for(let i = 11; i <= 99;i++){
+                                        if
+                                        (
+                                            i == 20 ||i == 23 || i == 25 || i == 26 || i == 28 || i == 29 ||
+                                            i == 30 || i == 36 || i== 39 || i == 40 || i == 50 || i == 51 ||
+                                            i == 52 || (i >=55 && i <61) || i == 70 || i == 72 || i == 76 ||
+                                            i == 78 || i == 80 || i == 90
+                                        )
+                                        {
+                                            continue;
+                                        }
+                                        else
+                                        {
+                                    %>
+                                        <option value = "<%=i%>"><%=i%></option>
+                                    <%}
+                                    }%>
+                                </select>
+                                <fieldset>
+                                    <legend>Contato</legend>
+                                    <hr>
+                                    <div class = "row">
+                                        <label for = "input-nome" class = "form-label">Telefone:</label>
+                                    </div>
+                                    <div class = "row">
+                                        <input type="tel" name="telefone" id="input-nome" placeholder="Digite o seu telefone:" class = "form-control" maxlength= "9"required>
+                                    </div>
+                                    <div class = "row">
+                                        <label for = "input-nome">Email:</label>
+                                    </div>
+                                    <div class = "row">
+                                        <input type="email" name="Email" id="input-nome" placeholder="name@example.com:" class = "form-control" maxlength = "200" required>
+                                    </div>
+                                    <div class = "row">
+                                        <label for = "input-nome">Cidade:</label>
+                                    </div>
+                                    <div class = "row">
+                                        <input type="text" name="cidade" id="input-nome" placeholder="Digite o nome da sua cidade" class = "form-control" maxlength = "200" required>
+                                    </div>
+                                </fieldset>        
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

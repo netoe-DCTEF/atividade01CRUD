@@ -1,5 +1,4 @@
 const express = require('express');
-const multer = require('multer');
 const upload = require('../config/upload.js');
 const router = express.Router();
 const controller = require('../controller/UsuarioController.js');
@@ -14,9 +13,9 @@ router.get('/pedido/:id/imprimindo',controller.imprimirPedido);
 
 /*HTTPS:POST*/ 
 
-router.post('/add',upload.single('foto'),controller.add);
+router.post('/add',upload.single('foto_perfil'),controller.add);
 router.post('/list',controller.list_filter);
-router.post("/edit_user/:id",upload.single('foto'),controller.edit_user);
+router.post("/edit_user/:id",upload.single('foto_perfil'),controller.edit_user);
 router.post('/list',controller.list_filter);
 
 

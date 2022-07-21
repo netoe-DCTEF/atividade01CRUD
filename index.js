@@ -13,9 +13,6 @@ app.use('/usuario',usuario_router);
 app.get('/',(req,res)=>{
     res.render(__dirname + '/index.ejs');
 });
-
-
-
 app.listen(3000,()=>{
     console.log("\nRODANDO APP NA PORTA: " + porta);
 });

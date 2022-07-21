@@ -3,10 +3,6 @@ function open_add(req,res){
     res.render("usuario/add.ejs");  
 }
 function add(req,res){    
-    let data = new Date();
-    let dataCompleta = data.getDate() + '/'+ data.getMonth() + '/' + data.getFullYear();
-    let horaCompleta  = data.getHours() + ':' + data.getMinutes() + ':' + data.getMilliseconds();
-
     var usuario = new UsuarioModel();  
     
     usuario.nome = req.body.nome;
@@ -65,7 +61,6 @@ function edit_user(req,res)
             telefone:req.body.telefone,
             foto_perfil:req.file.filename,
         },
-
         function (err,result){
             if(err){
                 res.send('\nError: ' + err);

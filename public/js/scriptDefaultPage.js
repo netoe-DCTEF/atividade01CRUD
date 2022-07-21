@@ -8,7 +8,7 @@ function getSaudacao(){
     let date = new Date();
     let hora = date.getHours();
     if(hora >=6 && hora < 12){
-        saudacao.innerHTML = "Bom dia , Sudo!";
+        saudacao.innerHTML = "Bom dia";
     }
     else if(hora >=12 && hora < 18){
         saudacao.innerHTML = "Boa tarde , Sudo!";

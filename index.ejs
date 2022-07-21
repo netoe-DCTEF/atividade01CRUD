@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/defaultRoute/style.css"/>
-    <title>Página Inicial</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/defaultRoute/style.css">
+    <title>Bem vindo:</title>
 </head>
-<body>
-    <div id = "wrapper">
-        <header class = "header-content-box">
-                <h2 id = "saudacoes"></h2>
-        </header>
-        <main>
-            <section class = "section-main-content-box">
-                <nav class = "nav-content-box">
-                    <h2>Selecione uma das opções abaixo:</h2>
-                    <ul>    
-                        <li>
-                            <a href = "/usuario/add" class = "link-routes">Adicionar</a>
-                        </li>
-                        <li>
-                            <a href = "/usuario/list" class = "link-routes">Listar</a>
-                        </li>
-                    </ul>
-                </nav>
-        </section>
-        </main>
-        <footer class = "footer-content-box">
-            <h2 id = "newCorp"></h2>
-        </footer>
-    </div>
-    
-    <script src = "/js/scriptDefaultPage.js"></script>
+<body class = "bg-dark">
+    <div class = "container">
+        <div class = "row header-content-box p-2 bg-dark">
+            <div class = "col-9 logo-area">
+                <h2 class = "fs-2 text-primary">Logo</h2>
+            </div>
+            <div class = "col-3 nav-area d-flex align-items-center justify-content-center">
+            </div>
+        </div>
+        <div class = "row bg-light main-content-box p-5 d-flex align-items-center justify-content-center">
+            <div class = "card default-card-size d-flex align-content-center justify-content-center">
+                <div class = "card-header bg-white">
+                    <div class = "card-title">
+                        <div class = "fs-9 font-weight-bold">
+                            <h2 class = "card-title">Um novo jeito de fazer história.</h2></div>
+                    </div>
+                </div>
+                <div class = "card-body default-card-body-size d-flex align-content-center justify-content-center">
+                    <div class = "a-links-card-btns d-flex align-items-center justify-content-center">
+                        <a href = "/usuario/add" class = "btn btn-primary default-size-btn-card ">Adicionar</a>
+                        <a href = "/usuario/list" class = "btn btn-primary default-size-btn-card ">Listar</a>
+                    </div>
+                </div>
+                <div class = "card-footer">
+                    <div class = "card-text">
+                        <small>Powered by NEWCORP.LTDA</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row footer-content-box">
+            
+        </div>
+    </div>  
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

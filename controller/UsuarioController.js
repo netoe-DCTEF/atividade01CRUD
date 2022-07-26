@@ -2,8 +2,8 @@ const UsuarioModel = require('../model/UsuarioModel.js');
 function open_add(req,res){
     res.render("usuario/add.ejs");  
 }
-function add(req,res){    
-    var usuario = new UsuarioModel();  
+function add(req,res){
+    var usuario = new UsuarioModel(); 
     
     usuario.nome = req.body.nome;
     usuario.email = req.body.email;
@@ -15,6 +15,7 @@ function add(req,res){
     usuario.ddd = req.body.ddd;
     usuario.telefone = req.body.telefone;
     usuario.foto_perfil = req.file.filename;
+    usuario.carimbo = Date.now().toString();
 
     usuario.save((err,result)=>{
         if(err){

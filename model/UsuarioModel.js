@@ -12,7 +12,7 @@ const database = require('../config/conectionMongoDB.js');
         ddd:{type:"String"},
         telefone:{type:"String"},
         foto_perfil:{type:"String"},
-        carimbo:{type:"Date",default:Date.now},
+        carimbo:{type:"Date"},
     });
 
 module.exports = database.model("Cliente",UsuarioSchema);

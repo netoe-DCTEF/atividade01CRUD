@@ -1,96 +1,91 @@
-<%-include ('../include/default_look_page/header.ejs')%>
-<div id ="wrapper">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <header class ="header-content-box">
-        <nav>
-            <li>
-                <a href = "/usuario/add" class ="botaoLink">Adicionar</a>   
-            </li>
-            <li>
-                <span>Lista de usuários</span>
-            </li>
-        </nav>
-    </header>
-    <main>
-        <form class = "search-form" method="post">
-            <input type="text" name="search" id="searchInput" placeholder="Digite o nome do cliente aqui!"/>
-            <input type="submit" value="Pesquisar" />
-        </form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/list/style.css">
+    <title>Listando Usuarios</title>
+</head>
 
-        <section class ="table-section">
-            <table class = "list-tabela">
+<body class="bg-light">
+    <div class="container">
+        <div class="">
+
+            <a href="/usuario/add" class="btn btn-success">
+                Adicionar
+            </a>
+
+        </div>
+        <table class="table bg-dark text-bg-primary">
+            <thead>
                 <tr>
-                    <th>Nome:</th>
-                    <th>Foto:</th>  
-                    <th>Email:</th>
-                    <th>CPF:</th>
-                    <th>IE:</th>
-                    <th>Telefone:</th>
-                    <th>Cidade:</th>
-                    <th>UF:</th>
-                    <th>Endereço:</th>
-                    <th>Carimbo</th>
-                    <th>Deletar:</th>
-                    <th>Editar:</th>
-                    <th>Pedido:</th>
+                    <th scope="col" class="text-danger bg-black">#ID</th>
+                    <th scope="col" class="text-primary">Nome:</th>
+                    <th scope="col" class="text-primary">CPF:</th>
+                    <th scope="col" class="text-primary">IE:</th>
+                    <th scope="col" class="text-primary">Telefone:</th>
+                    <th scope="col" class="text-primary">Email</th>
+                    <th scope="col" class="text-primary">Cidade/UF</th>
+                    <th scope="col" class="text-primary">Endereço:</th>
+                    <th scope="col" class="text-primary">Carimbo:</th>
+                    <th scope="col" class="text-bg-danger">Editar:</th>
+                    <th scope="col" class="text-bg-warning">Deletar:</th>
                 </tr>
-                <% UsuarioModel.forEach((usuario)=>{%>
-                <tr>
-                    <td class = "align-center-table">
+            </thead>
+            <tbody>
+                <%UsuarioModel.forEach((usuario) => {%>
+
+                <tr class="col">
+                    <th scope="col" class="bg-black">
+                        <%=usuario._id%>
+                    </th>
+                    <td scope="col">
                         <%=usuario.nome%>
                     </td>
-                    <td class = "align-center-table">
-                        <img src = "/img/photos/<%=usuario.foto_perfil%>" alt = "Foto" class = "foto-perfil" />
+                    <td scope="col">
+                        <%=usuario.cpf%>
                     </td>
-                    <td class = "align-center-table">
-                        <%= usuario.email%>
-                    </td class = "align-center-table">
-                    <td class = "align-center-table" >
-                        <span id = "cpf_camp"><%= usuario.cpf%></span>
+                    <td scope="col">
+                        <%=usuario.ie%>
                     </td>
-                    <td class = "align-center-table">
-                        <%= usuario.ie%>
+                    <td scope="col">
+                        (<%=usuario.ddd%>) <%=usuario.telefone%>
                     </td>
-                    <td class = "align-center-table">
-                        <span>(<%= usuario.ddd %>)  <%= usuario.telefone%></span>
+                    <td scope="col">
+                        <%=usuario.email%>
                     </td>
-                    <td class = "align-center-table">
-                        <%= usuario.cidade%>
+                    <td scope="col">
+                        <%=usuario.cidade%>/<%=usuario.uf%>
                     </td>
-                    <td class = "align-center-table">
-                        <%= usuario.uf%>
+                    <td scope="col">
+                        <%=usuario.endereco%>
                     </td>
-                    <td class = "align-center-table">
-                        <%= usuario.endereco%>
+                    <td scope="col">
+                        <%=usuario.carimbo.toLocaleString()%>
                     </td>
-                    <td class = "align-center-table">
-                        <span><%=usuario.carimbo.toLocaleString()%> </span>
-                    </td>
-
-                    <td class ="align-center-table">
-                        <a href = "/usuario/delete_user/<%= usuario._id%>">
-                            <img src = "/img/icons/delete_icon.png" class = "img-fix-size" />    
+                    <td scope="col" class="text-bg-danger">
+                        <a href="/usuario/edit_user/<%=usuario._id%>" class="btn">
+                            <img class="icon-responsive icon-config-css" src="/img/icons/edit-icon.png" alt="Editar" />
                         </a>
-                        
                     </td>
-                    <td class = "align-center-table">
-
-                        <a href = "/usuario/edit_user/<%= usuario._id%>">
-                            <img src = "/img/icons/edit_icon.png" class = "img-fix-size"/>    
-                        </a>   
-                    </td>
-                    <td class = "align-center-table">
-                        <a href = "/usuario/pedido/<%=usuario._id%>" >Abrir</a>
+                    <td scope="col" class="text-bg-warning">
+                        <a href="/usuario/delete_user/<%=usuario._id%>" class="btn">
+                            <img class="icon-responsive icon-config-css" src="/img/icons/remove-icon.png"
+                                alt="Remover" />
+                        </a>
                     </td>
                 </tr>
-                
-                <% })%>
-            </table>
-    </section>
-    </main>
-    <footer>
-    
+                <% });%>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+</body>
 
-    </footer>
-</div>
-<%- include ('../include/default_look_page/footer.ejs')%>
+</html>

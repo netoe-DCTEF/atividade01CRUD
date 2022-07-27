@@ -8,14 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/addEdit/style.css" type="text/css">
-    <title>Adicionando:</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/style_addons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/style_addons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/style_addons/favicon-16x16.png">
+    <link rel="manifest" href="/style_addons/site.webmanifest">
+    <title>Editando cliente:</title>
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark" >
     <div class="container">
         <div class="header-content-box row p-3 d-flex align-items-center bg-primary bg-gradient">
             <div class="col-6 logo-field justify-content-start">
-                <h2 class='d-inline text-white fs-1'>Adicionando Clientes...</h2>
+                <h2 class='d-inline text-white fs-1'><strong>Adicionando cliente:</strong></h2>
             </div>
             <div class="col-6 routes-link d-inline-block d-flex justify-content-end">
                 <a href="/usuario/list" class="btn btn-danger bg-gradient text-decoration-none"> Listar</a>
@@ -26,45 +30,40 @@
                 <div class="card-body">
                     <div class="row">
                         <form method="post" enctype="multipart/form-data">
-                            <fieldset class = "fieldset-border">
-                                <div class="row margin-input">
-                                    <legend>Foto</legend>
-                                    <hr>
-                                </div>
-                                <div class="row margin-input">
-                                    <input type="file" name="foto_perfil" id="input-foto" accept="image/*" class = "form-control"required>
-                                </div>
-                            </fieldset>
-                            <fieldset class = "fieldset-border">
-                                <div class="row margin-input-legend">
-                                    <legend>Dados Pessoais</legend>
-                                    <hr>
-                                </div>
-                                
+                            <fieldset>
+                                <fieldset class = "fieldset-border">
+                                    <div class="row margin-input">
+                                        <legend>Foto</legend>
+                                        <hr>
+                                    </div>
+                                    <div class="row margin-input">
+                                        <input type="file" name="foto_perfil" id="input-foto" accept="image/*" class = "form-control" required>
+                                    </div>
+                                </fieldset>
                                 <div class="row margin-input">
                                     <label for="input-nome" class="form-label">Nome:</label>
                                 </div>
                                 <div class="row margin-input">
                                     <input type="text" name="nome" id="input-nome" placeholder="Digite o seu nome aqui:"
-                                        class="form-control" required>
+                                        class="form-control readonly-config" required >
                                 </div>
                                 <div class="row margin-input">
                                     <label for="input-cpf" class="form-label">CPF:</label>
                                 </div>
                                 <div class="row margin-input">
                                     <input type="number" name="cpf" id="input-cpf" placeholder="Informe o seu CPF aqui:"
-                                        class="form-control" maxlength="11" required>
+                                        class="form-control readonly-config" maxlength="11" required>
                                 </div>
                                 <div class="row margin-input">
                                     <label for="input-ie" class="form-label">Inscrição Estadual:</label>
                                 </div>
                                 <div class="row margin-input">
                                     <input type="number" name="ie" id="input-ie" placeholder="Digite a IE aqui:"
-                                        class="form-control" maxlength="9" required>
+                                        class="form-control readonly-config" maxlength="9" required>
                                 </div>
 
                             </fieldset>
-                                <fieldset class = "fieldset-border">
+                                <fieldset>
                                     <div class="row margin-input-legend">
                                         <legend>Contato</legend>
                                         <hr>
@@ -73,7 +72,8 @@
                                         <label for="input-ddd form-label">DDD:</label>
                                     </div>
                                     <div class="row margin-input">
-                                        <select name="ddd" class="form-control" required>
+                                        <select name="ddd" class="form-select readonly-config" required>
+                                            <option hidden>Selecione</option>
                                             <% for(let i=11; i <=99;i++){ if ( i==20 ||i==23 || i==25 || i==26 || i==28 || i==29
                                                 || i==30 || i==36 || i==39 || i==40 || i==50 || i==51 || i==52 || (i>=55 && i
                                                 <61) || i==70 || i==72 || i==76 || i==78 || i==80 || i==90 ) { continue; } else
@@ -89,19 +89,19 @@
                                     </div>
                                     <div class="row margin-input">
                                         <input type="tel" name="telefone" id="input-telefone"
-                                            placeholder="Digite o seu telefone:" class="form-control" maxlength="9"
-                                            required>
+                                            placeholder="Digite o seu telefone:" class="form-control readonly-config" maxlength="9"
+                                            required >
                                     </div>
                                     <div class="row margin-input">
                                         <label for="input-nome" class="form-label">Email:</label>
                                     </div>
                                     <div class="row margin-input">
                                         <input type="email" name="Email" id="input-email"
-                                            placeholder="name@example.com:" class="form-control" maxlength="200"
-                                            required>
+                                            placeholder="name@example.com:" class="form-control readonly-config" maxlength="200"
+                                            required >
                                     </div>
                                 </fieldset>
-                                <fieldset class = "fieldset-border">
+                                <fieldset>
                                     <div class="row margin-input-legend">
                                         <legend>Localidade:</legend>
                                         <hr>
@@ -111,23 +111,23 @@
                                     </div>
                                     <div class="row margin-input">
                                         <input type="text" name="cidade" id="input-cidade"
-                                            placeholder="Digite o nome da sua cidade:" class="form-control"
-                                            maxlength="200" required>
+                                            placeholder="Digite o nome da sua cidade:" class="form-control readonly-config"
+                                            maxlength="200" required >
                                     </div>
                                     <div class="row margin-input">
                                         <label for="input-nome" class="form-label">Endereco:</label>
                                     </div>
                                     <div class="row margin-input">
                                         <input type="text" name="endereco" id="input-cidade"
-                                            placeholder="Digite seu endereco" class="form-control" maxlength="200"
+                                            placeholder="Digite seu endereco" class="form-control readonly-config" maxlength="200"
                                             required>
                                     </div>
                                     <div class="row margin-input">
                                         <label for="input-nome" class="form-label">Unidade Federativa:</label>
                                     </div>
                                     <div class="row margin-input">
-                                        <select name="uf" required>
-                                            <option hidden>UF</option>
+                                        <select name="uf" required class = "form-select readonly-config">
+                                            <option hidden>Selecione</option>
                                             <option value="RO">RO</option>
                                             <option value="AC">AC</option>
                                             <option value="AM">AM</option>
@@ -159,13 +159,13 @@
                                         </select>
                                     </div>
                                 </fieldset>
-                                <fieldset class = "fieldset-border">
+                                <fieldset>
                                     <div class="row margin-input-legend">
-                                        <hr>
                                         <legend>Confirmar alterações?</legend>
+                                        <hr>
                                     </div>
                                     <div class="row margin-input">
-                                        <input type="submit" value="Adicionar"
+                                        <input type="submit" value="Confirmar alterações"
                                             class="form-control btn btn-success bg-gradient text-light form-control-lg">
                                     </div>
                                 </fieldset>

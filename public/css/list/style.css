@@ -4,3 +4,7 @@
 .icon-config-css{
     color: white;
 }
+.id-div-width{
+    max-width: 5em;
+    overflow: auto;
+}
